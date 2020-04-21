@@ -80,10 +80,10 @@ class PetClinicController(DaoSupport):
         """Add an owner to the database."""
         rowsAffected = self.database_template.execute("""
             INSERT INTO owners
-            (first_name, last_name, address, city, telephone)
+            (first_name, last_name, address, city, telephone, username)
             VALUES
-            (?, ?, ?, ?, ?)
-            """, (kwargs["firstName"], kwargs["lastName"], kwargs["address"], kwargs["city"], kwargs["telephone"]))
+            (?, ?, ?, ?, ?, ?)
+            """, (kwargs["firstName"], kwargs["lastName"], kwargs["address"], kwargs["city"], kwargs["telephone"], (kwargs["firstName"][0] +  kwargs["lastName"]).lower()))
         return rowsAffected
 
     def updateOwner(self, id, address = "", city = "", telephone = ""):

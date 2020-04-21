@@ -7,7 +7,7 @@
 	<object id="connectionFactory" class="springpython.database.factory.MySQLConnectionFactory">
 		<property name="username" value="springpython"/>
 		<property name="password" value="springpython"/>
-		<property name="hostname" value="localhost"/>
+		<property name="hostname" value="db"/>
 		<property name="db" value="petclinic"/>
 	</object>
 	

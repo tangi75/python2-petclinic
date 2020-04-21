@@ -56,7 +56,7 @@ class PetClinicClientAndServer(PythonConfig):
         connFactory = factory.MySQLConnectionFactory()
         connFactory.username = "springpython"
         connFactory.password = "springpython"
-        connFactory.hostname = "localhost"
+        connFactory.hostname = "db"
         connFactory.db = "petclinic"
         return connFactory
     
@@ -251,7 +251,7 @@ class PetClinicServerOnly(PythonConfig):
         connFactory = factory.MySQLConnectionFactory()
         connFactory.username = "springpython"
         connFactory.password = "springpython"
-        connFactory.hostname = "localhost"
+        connFactory.hostname = "db"
         connFactory.db = "petclinic"
         return connFactory
     

@@ -53,6 +53,7 @@ if __name__ == '__main__':
                       	 "tools.staticdir.dir": "html"}
             }
 
+    cherrypy.config.update({'server.socket_host': '0.0.0.0'})
     cherrypy.tree.mount(applicationContext.get_object(name = "root"), '/', config=conf)
 
     cherrypy.engine.start()
